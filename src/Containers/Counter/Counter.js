@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import * as actionTypes from '../../store/Actions/counter';
-
+import './Counter.css'
 import Aux from '../../hoc/Aox/Aox'
 
 class counter extends React.Component{
@@ -13,12 +13,10 @@ class counter extends React.Component{
     render(){
         return(
             <Aux>
-            <div>
-                <p>{this.props.counter}</p>
-            </div>
-            <div>
-                <button onClick={this.props.inc}>increment</button>
-                <button onClick={this.props.dec}>decrement</button>
+            <div className="Counter">
+                <p className="txt">{this.props.counter}</p>
+                <button className="button button1" onClick={this.props.inc}>increment</button>
+                <button className="button button3" onClick={this.props.dec}>decrement</button>
             </div>
             </Aux>
         );
